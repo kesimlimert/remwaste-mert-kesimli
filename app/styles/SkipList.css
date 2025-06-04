@@ -15,7 +15,7 @@
   border: 1px solid #444;
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -249,13 +249,13 @@
   .road-placement-error {
     float: none;
     margin: 0 0 10px 0;
-    font-size: 0.75em;
-    padding: 3px 6px;
+    font-size: 0.65em;
+    padding: 3px 5px;
     justify-content: center;
   }
 
   .error-icon {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .skip-card {
@@ -297,4 +297,15 @@
   .continue-button {
     flex: 1;
   }
-} 
+}
+
+@media (max-width: 380px) {
+  .road-placement-error {
+    font-size: 0.55em;
+    padding: 2px 4px;
+  }
+
+  .error-icon {
+    font-size: 9px;
+  }
+}
