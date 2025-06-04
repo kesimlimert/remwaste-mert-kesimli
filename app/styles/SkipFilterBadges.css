@@ -1,0 +1,171 @@
+.skip-filter-badges {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid #555;
+  border-radius: 20px;
+  background-color: #2d2d2d;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.filter-badge:hover {
+  background-color: #3a3a3a;
+  border-color: #777;
+}
+
+.filter-badge.active {
+  background-color: #4d9eff;
+  color: white;
+  border-color: #3d7dcc;
+}
+
+.filter-badge.open {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.badge-arrow {
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+
+.filter-badge.open .badge-arrow {
+  transform: rotate(180deg);
+}
+
+.clear-all-button {
+  padding: 8px 15px;
+  border: 1px solid #f44336;
+  border-radius: 20px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.clear-all-button:hover {
+  background-color: #d32f2f;
+}
+
+.dropdown-popup {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2d2d2d;
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  min-width: 280px;
+  max-width: 400px;
+  margin-top: 5px;
+}
+
+.popup-content {
+  padding: 20px;
+}
+
+.popup-content h4 {
+  margin: 0 0 15px 0;
+  color: #e0e0e0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.popup-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.popup-options.multi-select {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.popup-options button {
+  padding: 10px 14px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  font-size: 14px;
+}
+
+.popup-options button:hover {
+  background-color: #454545;
+  border-color: #777;
+}
+
+.popup-options button.selected {
+  background-color: #4d9eff;
+  color: white;
+  border-color: #3d7dcc;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  border-top: 1px solid #555;
+  padding-top: 15px;
+}
+
+.clear-button {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #f44336;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #f44336;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.clear-button:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.done-button {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #4d9eff;
+  border-radius: 4px;
+  background-color: #4d9eff;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.done-button:hover {
+  background-color: #3d7dcc;
+} 

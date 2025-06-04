@@ -8,6 +8,7 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import { OrderProcessSteps } from "./components/OrderProcessSteps";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
@@ -25,7 +26,7 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,7 +43,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <>
+      <OrderProcessSteps currentStep={3} />
+      <Outlet />
+    </>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
@@ -62,11 +68,27 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
-      <h1>{message}</h1>
-      <p>{details}</p>
+    <main style={{ 
+      paddingTop: '4rem', 
+      padding: '1rem', 
+      maxWidth: '1200px', 
+      margin: '0 auto',
+      backgroundColor: '#1a1a1a',
+      color: '#e0e0e0',
+      minHeight: '100vh'
+    }}>
+      <h1 style={{ color: '#f44336' }}>{message}</h1>
+      <p style={{ color: '#ccc' }}>{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre style={{ 
+          width: '100%', 
+          padding: '1rem', 
+          overflowX: 'auto',
+          backgroundColor: '#2d2d2d',
+          border: '1px solid #444',
+          borderRadius: '4px',
+          color: '#e0e0e0'
+        }}>
           <code>{stack}</code>
         </pre>
       )}

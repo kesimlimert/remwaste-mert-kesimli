@@ -1,0 +1,14 @@
+.skip-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+}
+
+.skip-container h1 {
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+} 
